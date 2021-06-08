@@ -1,0 +1,20 @@
+//proto版本
+syntax = "proto3";
+
+//生成代码后的包名
+package helloworld;
+
+//服务定义
+service Greeter {//服务名称
+  // 服务提供的借口，包括请求和回复的数据结构
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+//服务接口用到的数据结构的具体定义
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
